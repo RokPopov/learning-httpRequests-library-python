@@ -26,3 +26,10 @@ data = json.loads(people_string)
 
 for person in data["people"]:
     print(person["name"])
+
+for person in data["people"]:
+    del person["phone"]
+
+new_string = json.dumps(data, indent=2, sort_keys=True)
+
+print(new_string)
